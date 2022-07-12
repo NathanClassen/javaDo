@@ -1,0 +1,10 @@
+<html>
+<head>
+    <title>welcome</title>
+</head>
+<body>
+    <h1>${helloMessage}</h1>
+    <p>${welcomeMessage}</p>
+    <h6>${age}</h6>
+</body>
+<html>
