@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>welcome</title>
+    <title>todo</title>
 </head>
 <body>
     <h1>${helloMessage}</h1>

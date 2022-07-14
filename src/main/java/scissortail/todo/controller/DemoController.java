@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import scissortail.todo.service.DemoService;
+import scissortail.todo.util.Mappings;
+import scissortail.todo.util.ViewNames;
 
 @Slf4j
 @Controller
@@ -34,12 +36,12 @@ public class DemoController {
         return "hello";
     }
 
-    @GetMapping("welcome")
+    @GetMapping(Mappings.WELCOME)
     public String welcome(@RequestParam(required = false) String user, @RequestParam(required = false) Integer age, Model model) {
         String name = (user != null ? user : "New User");
         model.addAttribute("helloMessage", demoService.getHelloMessage(name));
         model.addAttribute("age", (age != null ? age : 0));
         //  return value represents the logical view name; i.e. a resolver specified in the ViewResolver
-        return "welcome";
+        return ViewNames.WELCOME;
     }
 }
